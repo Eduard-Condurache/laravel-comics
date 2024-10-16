@@ -4,17 +4,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Welcome</title>
+        <title>Comics</title>
 
+        {{-- Stili nell'head --}}
+        <link rel="stylesheet" href="css/style.css">
+
+        {{-- <!-- Includiamo gli assets con la direttiva @vite --> --}}
         @vite('resources/js/app.js')
+
+        @yield('head-imports')
     </head>
     <body>
+        {{-- HEADER --}}
+        @include('partials.header')
 
-        @include('partials.global-header')
+        {{-- MAIN --}}
+        @include('partials.main')
 
-        <main>
-            @yield('main-content')
-        </main>
+        {{-- FOOTER --}}
+        @include('partials.footer')
 
+        {{-- JS da importare nel body --}}
+        @yield('body-imports')
     </body>
-</html>
+</html> 

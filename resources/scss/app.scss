@@ -1,13 +1,124 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
 @import '~bootstrap/scss/bootstrap';
 
+ /* GENERAL */
+  
+ .container {
+    width: 1320px;
+    margin: 0 auto;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+
+header {
+    background-color: white;
+    height: 150px;
+    @include flex-center;
+    margin-top: 20px;
+
+    nav {
+      @include flex-center;
+      align-items: center;
+
+      ul {
+        display: flex;
+        @include simple-ul;
+
+        li a {
+          text-decoration: $noTextDecoration;
+          margin: 10px;
+          font-size: 0.90rem;
+          color: #464646;
+          font-weight: bold;
+          position: relative;
+
+          &.active {
+            color: $mainColor;
+            
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: -65px;
+              height: 5px;
+              background-color: $mainColor;
+            }
+          }
+        }
+      }
+    }
+  }
+
+//   MAIN
+
 main {
-    background-image: url('../img/testimg.webp');
-    background-repeat: no-repeat;
-    h1 {
-        color: lightcoral;
+    background-color: #1C1C1C;
+
+    .jumbotron {
+      min-height: 400px;
+      width: 100%;
+      background-image: url("../img/jumbotron.jpg");
+      background-size:cover;
     }
 
-    img {
-        height: 335px;
+    .main-content {
+      position: relative;
+      padding: 60px 0 20px 0;
+
+      .jumbobutton button {
+        border: none;
+        padding: 15px 30px;
+        background-color: $mainColor;
+        position: absolute;
+        top: -25px;
+
+        a {
+          @include a-reset;
+          font-size: 1.4rem;
+        }
+      }
+
+      .cards-container {
+          display: flex;
+          flex-wrap: wrap;
+          
+          .card-item {
+            width: 200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        
+            .seriesimage-container img {
+                width: 190px;
+                height: 190px;
+                object-fit: cover;
+                object-position: top;
+                }
+        
+            p {
+                padding: 15px 0;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                color: white !important;
+            }
+        }
+      }
+
+      .load-button {
+        text-align: center;
+
+        button {
+          border: none;
+          padding: 10px 60px;
+          background-color: $mainColor;
+
+          a {
+            @include a-reset;
+          }
+        }
+      }
     }
-}
+  }
