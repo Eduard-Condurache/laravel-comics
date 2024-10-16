@@ -122,3 +122,69 @@ main {
       }
     }
   }
+
+//   FOOTER
+
+  /* FOOTER LINKS */
+
+  footer .footer-links {
+    padding: $yPadding;
+    background-color: $mainColor;
+    img {
+      max-width: 50px;
+    }
+
+    ul {
+    width: 100%;
+    @include simple-ul;
+    @include flex-center;
+
+        li {
+        @include flex-center;
+            a {
+                margin: $xMargin;
+                @include a-reset;
+                white-space: nowrap;
+            }
+        }
+    }
+  }
+
+   /* FOOTER INFOS */
+
+   footer .footer-infos-bg {
+    padding: $yPadding;
+    background-image: 
+      url('/resources/img/dc-logo-bg.png'),
+      url('/resources/img/footer-bg.jpg');
+    background-position: 75% center, center;
+    background-size: 500px, cover;
+    background-repeat: no-repeat, no-repeat;
+  }
+  
+    footer .footer-infos {
+      width: 40%;
+      height: 80%;
+      display: flex;
+      flex-wrap: wrap;
+  
+      h4 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+  
+      ul {
+        @include simple-ul;
+        margin-right: 30px;
+  
+        li {
+        padding: 0;
+  
+          a {
+          text-decoration: none;
+          color: white;
+          font-size: 0.85rem;
+          }
+        }
+      }
+    }
