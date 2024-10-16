@@ -103,18 +103,57 @@
         <div class="container">
             <div class="footer-infos">
                 @foreach ($footerinfos as $footerinfo)
-                    <ul>
+                <div>
+                    <ul> 
                         <h4>
                             {{ $footerinfo['title'] }}
                         </h4>
                         
                         @foreach($footerinfo['infos'] as $info)
+                        <li>
                             <a href="{{ $footerinfo['url'] }}">
                                 {{ $info }}
                             </a>
-                        @endforeach
+                        </li>
+                        @endforeach  
                     </ul>
+                </div>
                 @endforeach
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-socials">
+        <div class="container">
+            <div>
+                <button>
+                    <a href="#">
+                        SIGN-UP NOW
+                    </a>
+                </button>
+            </div>
+
+            <div class="socials">
+                <h2>
+                    FOLLOW US
+                </h2>
+                <div class="social-icons">
+                    <a href="#">
+                        <img src="{{ Vite::asset('resources/img/footer-facebook.png') }}" alt="facebook">
+                    </a>
+                    <a href="#">
+                        <img src="{{ Vite::asset('resources/img/footer-twitter.png') }}" alt="twitter">
+                    </a>
+                    <a href="#">
+                        <img src="{{ Vite::asset('resources/img/footer-youtube.png') }}" alt="youtube">
+                    </a>
+                    <a href="#">
+                        <img src="{{ Vite::asset('resources/img/footer-periscope.png') }}" alt="periscope">
+                    </a>
+                    <a href="#">
+                        <img src="{{ Vite::asset('resources/img/footer-pinterest.png') }}" alt="pinterest">
+                    </a>
+                </div>
             </div>
         </div>
     </div>

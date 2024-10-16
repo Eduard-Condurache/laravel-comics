@@ -1,0 +1,44 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+
+/* HEADER STYLES */
+
+header {
+    background-color: white;
+    height: 150px;
+    @include flex-center;
+    margin-top: 20px;
+
+    nav {
+        @include flex-center;
+        align-items: center;
+
+        ul {
+            display: flex;
+            @include simple-ul;
+
+            li a {
+                text-decoration: $noTextDecoration;
+                margin: 10px;
+                font-size: 0.90rem;
+                color: #464646;
+                font-weight: bold;
+                position: relative;
+
+                &.active {
+                    color: $mainColor;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -65px;
+                        height: 5px;
+                        background-color: $mainColor;
+                    }
+                }
+            }
+        }
+    }
+}
