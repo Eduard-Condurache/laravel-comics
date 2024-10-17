@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('main-content')
+@section('main')
 
 <div>
     <h1>
-        {{ $testTest2 }}
+        ABOUT
     </h1>
 </div>
 

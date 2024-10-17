@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('main')
+
 <main>
     <div class="jumbotron"></div>
 
@@ -28,3 +32,4 @@
     </div>
 </main>
 
+@endsection

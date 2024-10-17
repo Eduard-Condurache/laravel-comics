@@ -63,8 +63,10 @@
             <div>
                 <ul>
                     @foreach($links as $link)
-                    <li class="mx-2">
-                        {{ $link['label'] }}
+                    <li>
+                        <a href="#">
+                            {{ $link['label'] }}
+                        </a>
                     </li>
                     @endforeach
                 </ul>

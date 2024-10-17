@@ -6,8 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Comics</title>
 
-        {{-- Stili nell'head --}}
-        <link rel="stylesheet" href="css/style.css">
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
 
         {{-- <!-- Includiamo gli assets con la direttiva @vite --> --}}
         @vite('resources/js/app.js')
@@ -19,7 +22,7 @@
         @include('partials.header')
 
         {{-- MAIN --}}
-        @include('partials.main')
+        @yield('main')
 
         {{-- FOOTER --}}
         @include('partials.footer')
@@ -27,4 +30,5 @@
         {{-- JS da importare nel body --}}
         @yield('body-imports')
     </body>
+    
 </html> 
